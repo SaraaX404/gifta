@@ -1,5 +1,6 @@
 // pages/index.tsx
 import React from 'react';
+import Link from 'next/link';
 import { GlobalStyle } from '../styles/globalStyles';
 
 const IndexPage: React.FC = () => {
@@ -17,50 +18,53 @@ const IndexPage: React.FC = () => {
       }}>
         <h1>Welcome to Gifta</h1>
         <p>Select your role:</p>
-        <a 
-          href="/influencer-signup" 
-          style={{
-            display: 'block',
-            width: '200px',
-            padding: '15px',
-            margin: '10px',
-            fontSize: '18px',
-            color: 'white',
-            backgroundColor: '#0070f3',
-            textDecoration: 'none',
-            borderRadius: '5px',
-            textAlign: 'center',
-            transition: 'background-color 0.3s ease'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
-        >
-          Influencers
-        </a>
-        <a 
-          href="/brand-signup" 
-          style={{
-            display: 'block',
-            width: '200px',
-            padding: '15px',
-            margin: '10px',
-            fontSize: '18px',
-            color: 'white',
-            backgroundColor: '#0070f3',
-            textDecoration: 'none',
-            borderRadius: '5px',
-            textAlign: 'center',
-            transition: 'background-color 0.3s ease'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
-        >
-          Brands
-        </a>
+        <Link href="/influencer-signup" passHref>
+          <span
+            style={{
+              display: 'block',
+              width: '200px',
+              padding: '15px',
+              margin: '10px',
+              fontSize: '18px',
+              color: 'white',
+              backgroundColor: '#0070f3',
+              textDecoration: 'none',
+              borderRadius: '5px',
+              textAlign: 'center',
+              transition: 'background-color 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
+          >
+            Influencers
+          </span>
+        </Link>
+        <Link href="/brand-signup" passHref>
+          <span
+            style={{
+              display: 'block',
+              width: '200px',
+              padding: '15px',
+              margin: '10px',
+              fontSize: '18px',
+              color: 'white',
+              backgroundColor: '#0070f3',
+              textDecoration: 'none',
+              borderRadius: '5px',
+              textAlign: 'center',
+              transition: 'background-color 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
+          >
+            Brands
+          </span>
+        </Link>
       </div>
     </>
   );
 };
 
 export default IndexPage;
-
