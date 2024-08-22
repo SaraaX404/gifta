@@ -51,9 +51,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log(result);
       
       res.status(200).json({ message: 'Brand signup successful', result });
-    } catch (error) {
+    } catch (error:any) {
       console.error('Error sending email:', error);
-      res.status(500).json({ message: 'Error processing brand signup' });
+      res.status(500).json({ message: error });
     }
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });
