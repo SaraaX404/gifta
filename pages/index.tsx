@@ -1,6 +1,6 @@
-// pages/index.tsx
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { GlobalStyle } from '../styles/globalStyles';
 
 const IndexPage: React.FC = () => {
@@ -14,9 +14,10 @@ const IndexPage: React.FC = () => {
         alignItems: 'center', 
         height: '100vh', 
         textAlign: 'center', 
-        backgroundColor: '#f9f9f9' 
+        backgroundColor: '#ffffff' 
       }}>
-        <h1>Welcome to Gifta</h1>
+        <Image src="/gifta-01.png" alt="Gifta Logo" width={200} height={100} />
+        <h1 style={{ color: '#068F9A' }}>Welcome to Gifta</h1>
         <p>Select your role:</p>
         <Link href="/influencer-signup" passHref>
           <span
@@ -27,15 +28,15 @@ const IndexPage: React.FC = () => {
               margin: '10px',
               fontSize: '18px',
               color: 'white',
-              backgroundColor: '#0070f3',
+              backgroundColor: '#068F9A',
               textDecoration: 'none',
               borderRadius: '5px',
               textAlign: 'center',
               transition: 'background-color 0.3s ease',
               cursor: 'pointer'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#056d77'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#068F9A'}
           >
             Influencers
           </span>
@@ -49,15 +50,15 @@ const IndexPage: React.FC = () => {
               margin: '10px',
               fontSize: '18px',
               color: 'white',
-              backgroundColor: '#0070f3',
+              backgroundColor: '#068F9A',
               textDecoration: 'none',
               borderRadius: '5px',
               textAlign: 'center',
               transition: 'background-color 0.3s ease',
               cursor: 'pointer'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#056d77'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#068F9A'}
           >
             Brands
           </span>

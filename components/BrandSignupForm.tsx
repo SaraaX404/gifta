@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const BrandSignupForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -34,21 +35,32 @@ const BrandSignupForm: React.FC = () => {
     }
   };
 
+  const mainColor = '#068F9A';
+
   return (
     <div style={{ 
       display: 'flex', 
-      gap:10,
+      gap: 10,
       flexDirection: 'column', 
       maxWidth: '600px', 
       margin: 'auto', 
-      marginTop:120,
+      marginTop: 120,
       padding: '60px', 
       backgroundColor: '#f9f9f9', 
       borderRadius: '10px' 
     }}>
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <Image 
+          src="/gifta-01.png"
+          alt="Gifta Logo"
+          width={150}
+          height={150}
+          style={{ objectFit: 'contain' }}
+        />
+      </div>
       <h1 style={{
         fontSize: '36px', 
-        color: '#0070f3', 
+        color: mainColor, 
         marginBottom: '20px', 
         textAlign: 'center' 
       }}>
@@ -186,15 +198,15 @@ const BrandSignupForm: React.FC = () => {
             padding: '10px', 
             width:'100%',
             marginTop:30,
-            backgroundColor: '#0070f3', 
+            backgroundColor: mainColor, 
             color: 'white', 
             border: 'none', 
             borderRadius: '5px', 
             cursor: 'pointer',
             fontSize: '16px' 
           }} 
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0070f3'}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#056b74'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = mainColor}
         >
           Submit
         </button>
