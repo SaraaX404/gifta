@@ -48,10 +48,10 @@ const InfluencerSignupForm: React.FC = () => {
       margin: 'auto', 
       marginTop: 120,
       padding: '60px', 
-      backgroundColor: '#f9f9f9', 
+      backgroundColor: '#ffffff', 
       borderRadius: '10px' 
     }}>
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+     <div style={{ textAlign: 'center', marginBottom: '20px', display:'flex',alignItems:'center', justifyContent:'center' }}>
         <Image 
           src="/gifta-01.png"
           alt="Gifta Logo"
